@@ -1,0 +1,90 @@
+.carousel {
+    height: 450px; /* Set the desired height */
+    overflow: hidden; /* Hide overflow to ensure images don't exceed the container */
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    width: 100%;
+}
+
+    
+.image-spacing {
+    margin-right: 62px; /* Add spacing between images */
+    margin-bottom: 15px; /* Add spacing at the bottom */
+}
+.img{
+    margin-left: 110px;
+}
+/* In your style.css file */
+#footer-placeholder {
+    margin-top: 50px; /* Adjust the value as needed */
+    padding-top: 20px; /* Optional, adds padding inside the footer */
+}
+.last{
+   margin-left: 45px; 
+}
+.lastPic {
+    margin-left: 86px;
+}
+.pic7{
+    margin-left: 67px;
+}
+.pic4{
+    margin-left: -5px;
+}
+.button4{
+    margin-left: 32px;
+}
+/* CSS to apply rounded corners to images */
+.img-rounded {
+    border-radius: 20px; /* Adjust this value to control the roundness */
+}
+.buy{
+    margin-top: 23px;
+    margin-left: 86px;
+}
+.Now{
+    margin-left: 123px;
+}
+.btn {
+    width: 262px;
+}
+.button{
+    width:auto
+}   
+.modal-header{
+    background-color: black;
+    color: white;
+}
+.btn-close{
+background-color: white;
+color: white;
+}
+.modal-footer{
+    background-color: black;
+    color: white;
+}
+.modal-body{
+    background-color: beige;
+}
+.lb{
+    margin-top: 14px;
+    margin-left: 85px;
+}
+.ls{
+    margin-left: 117px; 
+}
+.submitbutton{
+    margin-left: 303px;
+}
+.modal-footer {
+    background-color: black;
+    color: white;
+    padding-top: 45px;
+}

@@ -1,0 +1,62 @@
+Frontend
+Frontend Overview:
+
+The frontend of my Online Shopping Project is responsible for presenting the user interface and collecting data from the users. It consists of three HTML files, each representing different categories of products:
+
+clothes.html: Displays clothing items.
+cosmetics.html: Displays cosmetic items.
+shows.html: Displays show-related items.
+Each HTML file includes:
+
+Images: Representing the products.
+Popup Button: A button beneath each image that triggers a form to open when clicked.
+Form Functionality:
+
+Popup Form: When the user clicks the popup button, a form appears, allowing the user to enter details such as price, name, phone number, and address.
+Form Submission: Once the user fills out the form and clicks the submit button, the data is sent to the backend for processing.
+
+
+
+Backend
+Backend Overview:
+
+The backend handles the business logic, database interactions, and server operations for the project. It ensures that data submitted from the frontend is processed and stored correctly. The backend is composed of the following components:
+
+server.js:
+
+Purpose: Initializes the Express server, sets up middleware, and defines API routes.
+Responsibilities: Configures middleware for JSON and URL-encoded data, connects to the database, and starts the server on a specified port. Routes incoming requests to appropriate handlers.
+connectDB.js:
+
+Purpose: Manages the connection to the MongoDB database using Mongoose.
+Responsibilities: Connects to the database using a connection URI and logs the success or failure of the connection.
+schema.js:
+
+Purpose: Defines the structure of the data in the MongoDB database.
+Responsibilities: Creates Mongoose schemas that outline the fields (e.g., name, price, phone, address) and their types. Exports a Mongoose model for database operations.
+controller.js:
+
+Purpose: Contains the logic for handling requests from the frontend.
+Responsibilities: Defines functions to process form submissions, validate data, save it to the database, and handle errors. Sends responses back to the client.
+routes.js:
+
+Purpose: Manages the API routes and connects them to controller functions.
+Responsibilities: Sets up API endpoints (e.g., /submit) and links them to the appropriate controller functions that handle the requests.
+Interaction Flow
+User Interaction:
+
+The user views the products on the frontend (clothes.html, cosmetics.html, or shows.html).
+The user clicks the popup button below an image to open the form.
+Form Submission:
+
+The user fills out the form with details (price, name, phone number, address).
+The form data is sent to the backend server upon submission.
+Backend Processing:
+
+The server receives the form data.
+The controller.js processes the data and interacts with the schema.js to save it to the MongoDB database.
+The server sends a response back to the frontend, indicating whether the data was saved successfully or if an error occurred.
+Database Storage:
+
+The data is stored in the MongoDB database according to the structure defined in schema.js.
+This setup ensures a smooth flow from data entry on the frontend to data storage and retrieval on the backend.

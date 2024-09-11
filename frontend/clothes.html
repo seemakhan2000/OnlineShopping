@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothes</title>
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <!-- Placeholder for the navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Content specific to clothes.html -->
+    <div class="container mt-4">
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="img/slider2.jpg"
+              class="d-block w-100"
+              alt="First Slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/silde2.webp"
+              class="d-block w-100"
+              alt="Second Slide"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="img/clo (1).png"
+            class="img-fluid image-spacing"
+            alt="Image 1"
+          />
+          <!-- JavaScript Function Call:
+onclick="setPrice(7000)" triggers the setPrice function with 7000 as the argument.
+Bootstrap Modal Action:
+data-bs-toggle="modal" and data-bs-target="#exampleModal" tell Bootstrap to display the modal with the ID exampleModal. -->
+          <!-- Button to open modal -->
+          <button
+            type="button"
+            class="btn btn-primary w-75"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            onclick="setPrice(5000)"
+          >
+            Buy Now
+          </button>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="img/clo (1).jpg"
+            class="img-fluid image-spacing"
+            alt="Image 2"
+          />
+          <button
+            type="button"
+            class="btn btn-primary w-75"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            onclick="setPrice(600)"
+          >
+            Buy Now
+          </button>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="img/clo (2).jpg"
+            class="img-fluid image-spacing"
+            alt="Image 3"
+          />
+          <button
+            type="button"
+            class="btn btn-primary w-75"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            onclick="setPrice(7000)"
+          >
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="img/pic1.jpg"
+            class="img-fluid image-spacing"
+            alt="Image 1"
+          />
+          <button
+            type="button"
+            class="btn btn-primary w-75"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            onclick="setPrice(5000)"
+          >
+            Buy Now
+          </button>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="img/pic2.jpg"
+            class="img-fluid image-spacing"
+            alt="Image 2"
+          />
+          <button
+            type="button"
+            class="btn btn-primary w-75"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            onclick="setPrice(6000)"
+          >
+            Buy Now
+          </button>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="img/imges.jpg"
+            class="img-fluid image-spacing"
+            alt="Image 3"
+          />
+          <button
+            type="button"
+            class="btn btn-primary w-75"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            onclick="setPrice(7000)"
+          >
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog custom-modal-width">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Price: <span id="productPrice">0</span>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="purchaseForm">
+              <div class="mb-3">
+                <label for="username" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea
+                  class="form-control"
+                  id="address"
+                  placeholder="Enter your address"
+                  required
+                ></textarea>
+              </div>
+              <div class="submitbutton">
+              <button type="submit" class="btn btn-primary button">Submit</button>
+              <button
+              type="button"
+              class="btn btn-secondary button"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+        </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        /*When the button is clicked, setPrice(7000) is called. The function executes with price set to 7000.
+Updating the Modal Price:
+document.getElementById('productPrice') selects the HTML element with the ID productPrice. This element is a <span> inside the modal that is meant to display the product price.
+.innerText = price; updates the text content of this <span> element to 7000.*/
+      //The setPrice function updates the <span id="productPrice"> element with the price of the selected product.
+      function setPrice(price) {
+        // Update the modal price element with the price passed
+        document.getElementById("productPrice").innerText = price;
+      }
+
+      // Load the navbar from the navbar.html file
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+
+      // Load the footer from the footer.html file
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+    
+  </body>
+</html>
